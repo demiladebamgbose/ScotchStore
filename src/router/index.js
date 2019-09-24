@@ -3,7 +3,9 @@ import Router from 'vue-router';
 // import HelloWorld from '@/components/HelloWorld';
 import Home from '@/pages/Home';
 import Cart from '@/pages/Cart';
-import Admin from '@/pages/Admin';
+import Index from '@/pages/admin/Index';
+import New from '@/pages/admin/New';
+import Create from '@/pages/admin/Create';
 
 Vue.use(Router);
 
@@ -17,7 +19,19 @@ export default new Router({
     {
       path: '/admin',
       name: 'Admin',
-      component: Admin,
+      component: Index,
+      children: [
+        {
+          path: 'new',
+          name: 'New',
+          component: New,
+        },
+        {
+          path: 'create',
+          name: 'Create',
+          component: Create,
+        },
+      ],
     },
     {
       path: '/cart',
