@@ -5,7 +5,8 @@ import Home from '@/pages/Home';
 import Cart from '@/pages/Cart';
 import Index from '@/pages/admin/Index';
 import New from '@/pages/admin/New';
-import Create from '@/pages/admin/Create';
+import View from '@/pages/admin/View';
+import Edit from '@/pages/admin/Edit';
 
 Vue.use(Router);
 
@@ -27,9 +28,14 @@ export default new Router({
           component: New,
         },
         {
-          path: 'create',
+          path: 'view',
           name: 'Create',
-          component: Create,
+          component: View,
+        },
+        {
+          path: 'edit/:id',
+          name: 'Edit',
+          component: Edit,
         },
       ],
     },

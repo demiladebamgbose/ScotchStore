@@ -1,13 +1,16 @@
 <template>
     <div class="new-admin">
         <div class = "container">
-          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 nav-holder">
             <ul class="admin-menu">
-              <li><router-link to="/admin/new">New</router-link></li>
-              <li><router-link to="/admin/create">Create</router-link></li>
+              <li><router-link to="/admin/new">New Admin</router-link></li>
+              <li><router-link to="/admin/view">View Admin</router-link></li>
+              <li><router-link to="/admin/edit/6">Edit</router-link></li>
             </ul>
           </div>
+          <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
             <router-view></router-view>
+          </div>
         </div>
     </div>
 </template>
@@ -44,5 +47,8 @@ export default {
   .admin-new, .admin-products {
     border-bottom: 2px solid #F5F5F5;
     padding: 30px 0;
+  }
+  .nav-holder {
+    margin-top: 25px;
   }
 </style>
